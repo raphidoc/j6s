@@ -1,2 +1,2 @@
 # j6s
-The 6sV2.1 code but with JSON output for easier parsing.
+Python wrapper for the 6sV2.1 code modified with JSON output,
