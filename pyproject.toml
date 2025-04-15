@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "j6s"
-version = "1.0.1"
+version = "1.0.2"
 description = "Python wrapper for the 6S atmospheric radiative transfer model modified with JSON output"
 readme = "README.md"
 license = { text = "GPL" }
