@@ -18,9 +18,9 @@ runs:
       with:
         path: ${{ env.CONDA }}/envs
         key:
-          conda-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('environment.yml') }}-${{ env.CACHE_NUMBER }}
+          conda-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('action.yml') }}-${{ env.CACHE_NUMBER }}
       env:
-        # Increase this value to reset cache if environment.yml has not changed
+        # Increase this value to reset cache if action.yml has not changed
         CACHE_NUMBER: 1
       id: cache
 
