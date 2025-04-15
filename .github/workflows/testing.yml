@@ -1,0 +1,34 @@
+name: testing
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  ApplicationTesting:
+    name: Application Tests
+
+    runs-on: ${{ matrix.os }}
+    defaults: # Required for conda environment activation
+      run:
+        shell: bash -el {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'ubuntu-latest', 'macos-latest', 'windows-latest' ]
+
+    steps:
+      - name: ⏬ Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: 🔧 Setup Environment
+        uses: ./.github/actions/environment
+
+      - name: 🧪 Run Tests
+        run: |
+          python -m unittest test.test_wrap
