@@ -27,7 +27,7 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: 🔧 Setup Environment
-        uses: ./.github/actions/environment
+        uses: ./.github/workflows/environment
 
       - name: 🧪 Run Tests
         run: |

@@ -1,0 +1,6 @@
+name: j6s
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - sixs_json
