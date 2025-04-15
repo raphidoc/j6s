@@ -48,7 +48,7 @@ class SixS:
         exe_name = "sixs_json.exe" if sys.platform == "win32" else "sixs_json"
 
         # Look in the environment
-        conda_prefix = os.environ.get("CONDA_PREFIX")
+        conda_prefix = sys.prefix
         if conda_prefix:
             candidate = (
                 Path(conda_prefix) / "Library" / "bin" / exe_name
